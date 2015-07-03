@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>ngAnimate</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div ng-controller="ctrlAnimate" class="container col-md-4 col-md-offset-4">
+        <input type="text" class="form-control" ng-model="producto" />
+        <div class="text-center">
+            <button class="btn btn-success btn-sm" ng-click="agregarProducto()">Agregar</button>
+            <button class="btn btn-danger btn-sm" ng-click="eliminarProducto()">Eliminar</button>
+            <button class="btn btn-info btn-sm" ng-click="obtenerClima()">Obtener clima</button>
+        </div>
+        <h3><span class="glyphicon glyphicon-sunglasses"></span>&nbsp;Clima en Santo Domingo </h3>
+        <div class="item clima">
+            {{clima}}
+        </div>
+        <h3><span class="glyphicon glyphicon-apple"></span>&nbsp;Lista de productos</h3>
+        <div class="item" ng-repeat="item in listaProductos">
+        	{{item.nombre}}
+        </div>
+    </div>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app_inicio.js"></script>
+</body>
+
+</html>

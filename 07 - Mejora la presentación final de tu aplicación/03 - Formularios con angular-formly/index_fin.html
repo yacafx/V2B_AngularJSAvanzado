@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="formlyApp">
+<head>
+    <meta charset="utf-8" />
+    <title>angular-formly</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-controller="ctrlRegistro as cr">
+<div class="container col-md-4 col-md-offset-4">
+    <h1>Registro de usuarios</h1>
+    <formly-form model="cr.usuario" fields="cr.datosUsuario">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </formly-form>
+</div>
+<script src="node_modules/api-check/dist/api-check.js"></script>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-formly/dist/formly.min.js"></script>
+<script src="node_modules/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.js"></script>
+<script src="app_inicio.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>Directivas personalizadas</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <div ng-controller="ctrlMiDirectiva" class="container col-md-4 col-md-offset-4">
+    <h3><span class="glyphicon glyphicon-leaf"> </span>Directivas personalizadas</h3>
+        <input type="text" class="form-control" ng-model="usuario.nombre" placeholder="Escribe tu nombre" />
+        <input type="text" class="form-control" ng-model="usuario.apellidos" placeholder="Escribe tus apellidos" />
+        <div el-usuario></div>
+    </div>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app_fin.js"></script>
+</body>
+
+</html>

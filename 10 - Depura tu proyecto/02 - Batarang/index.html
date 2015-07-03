@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>Batarang</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div ng-controller="ctrlTraduce" class="container col-md-4 col-md-offset-4">
+        <div class="dropdown text-right">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Cambiar idioma <span class="caret"></span></button>
+            <ul class="dropdown-menu dropdown-menu-right">
+                <li><a ng-click="cambiarIdioma('es')">Español</a></li>
+                <li><a ng-click="cambiarIdioma('en')">Ingles</a></li>
+            </ul>
+        </div>
+        <input type="text" class="form-control" ng-model="producto" />
+        <div class="text-center">
+            <button class="btn btn-success btn-sm" ng-click="agregarProducto()">{{ 'ADD' | translate }}</button>
+            <button class="btn btn-danger btn-sm" ng-click="eliminarProducto()">{{ 'DELETE' | translate }}</button>
+        </div>
+        <h3>{{ 'LIST' | translate }}</h3>
+        <div class="item" ng-repeat="item in listaProductos">
+            {{item.nombre}}
+        </div>
+    </div>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
